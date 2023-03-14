@@ -1,2 +1,2 @@
-# compose-demo
-Demo for Docker Compose
+# docker-demo
+Demo for Docker 
