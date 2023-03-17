@@ -8,12 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Login to github registry
+      - name: Login to docker hub
+        if: success()
         uses: actions-hub/docker/login@master
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKER_REGISTRY_URL: docker.pkg.github.com
 
       - name: Build :latest
         if: success()
